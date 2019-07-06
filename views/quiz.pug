@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 #{title}
+  h3 #{questionTitle} #{show === false ? 'Results:' : null}
+  if show === true
+    form(method='post' class='quiz-form')
+      each answer, index in answers
+        label
+          input(
+            type='radio'
+            value=index
+            name='answer'
+            checked = index === 0 ? true : false
+            )
+          span(class='quiz-form-answer') #{answer.answer} (#{answer.votes} votes)
+      button Send
+  else
+    ul(class='quiz-results')
+      each answer in answers
+        li #{answer.answer} (#{Math.round(answer.votes / summ * 100)}%)
+    p Summary votes: #{summ}

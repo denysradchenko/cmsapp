@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1 #{title} Panel
+  a(href='admin/news/add' class='link') Add news
+  a(href='/logout' class=['link', 'link-margin-left']) Logout
+
+  if data.length === 0
+    p There're no news
+  each news, index in data
+    div(class='admin-news-block')
+      div(class='admin-news-id') #{index + 1}
+      div(class='news-data')
+        h4 #{news.title}
+          span (#{news.created.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' , minute: 'numeric' })})
+
+      div(class='news-actions')
+        a(href=`/admin/news/delete/${news._id}` class='link') Delete

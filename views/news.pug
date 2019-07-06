@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+  if data.length > 0
+    form(method='get' class='search-form')
+      input(type='text' name='search' value=search)
+      button(type='submit') Search
+    div(class='news-list')
+    each news in data
+      article(class='news-item')
+        h3 #{news.title}
+        span #{news.created}
+        p #{news.description}
+  else
+    p There're no news

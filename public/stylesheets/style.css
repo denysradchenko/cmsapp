@@ -1,0 +1,156 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.link {
+  color: rgb(0, 74, 104);
+  font-size: 1.2rem;
+}
+
+.link-margin-left {
+  margin-left: 10px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  background-color: #00B7FF;
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+nav a {
+  padding: 10px 40px;
+  background-color: transparent;
+  transition: background 0.3s linear;
+}
+
+nav a:hover {
+  background-color: rgb(93, 209, 255);
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link-active {
+  background-color: rgb(93, 209, 255);
+}
+
+.login-form {
+  font-size: 1rem;
+  max-width: 20vw;
+}
+
+form::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+.login-form span {
+  display: inline-block;
+  width: 7vw;
+}
+
+.login-form input {
+  float: right
+}
+
+button {
+  float: right;
+}
+
+.search-form {
+  padding: 10px 0;
+}
+
+.search-form button {
+  float: none;
+  margin: 0;
+}
+
+.add-news-form {
+  max-width: 25vw;
+}
+
+.add-news-form input,
+textarea {
+  width: 100%;
+}
+
+.msg {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.succeed-msg {
+  color: rgb(47, 172, 74);
+}
+
+.warning-msg {
+  color: rgb(172, 47, 47);
+}
+
+.admin-news-block {
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(0, 74, 104);
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.admin-news-block:last-child {
+  border-bottom: 0px;
+}
+
+.news-data h4 {
+  font-size: 1rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.news-data span {
+  margin-left: 10px;
+  color: rgb(131, 131, 131);
+}
+
+.news-data {
+  margin: 0 20px;
+}
+
+.news-actions a {
+  font-size: 1rem;
+}
+
+.quiz-form button {
+  float: none;
+}
+
+.quiz-form-answer {
+  margin-left: 10px;
+}
+
+.quiz-results {
+  padding-left: 15px;
+}
+
+.quiz-results li {
+  padding: 5px 0;
+}

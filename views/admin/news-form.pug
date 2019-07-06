@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    h1 #{title}
+    if addNews === true
+        p(class='msg' class=err===true ? 'warning-msg' : 'succeed-msg') #{msg}
+
+        if (err === false)
+            a(href='/admin' class='link') Go back
+
+        if err===true
+            each message in errors.errors
+                p=message
+            form(method='post' class='add-news-form')
+                label
+                    span Title
+                    input(type='text' name='title' value=actualTitle || '')
+                label
+                    span Description
+                    textarea(name='description' value=actualDescription || '')
+                button(type='submit') Add
+    else
+        form(method='post' class='add-news-form')
+            label
+                span Title
+                input(type='text' name='title')
+            label
+                span Description
+                textarea(name='description')
+            button(type='submit') Add
