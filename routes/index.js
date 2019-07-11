@@ -2,9 +2,19 @@ const express = require('express');
 const router = express.Router();
 const trueLogin = 'admin';
 const truePassword = '123456';
+const Quiz = require('../models/quiz');
 
 /* GET home page. */
 router.get('/', (req, res) => {
+  const quizData = new Quiz({
+    questionTitle: 'What is Your name?'
+  });
+
+  quizData.save((err) => {
+    console.log(err);
+  });
+
+
   res.render('index', { title: 'Express' });
 });
 
